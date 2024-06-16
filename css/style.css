@@ -1,25 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-#loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#loader img {
-     width: 100%;
-}
-
-#content {
-    display: none;
-}
-
 body {
     margin: 0;
     padding: 0;
