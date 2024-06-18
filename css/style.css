@@ -584,6 +584,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .contact-form textarea {
@@ -824,6 +825,7 @@ body {
     border: none;
     border-bottom: 1px solid #0C1C3F;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 .contact-form-contact textarea {
@@ -933,6 +935,7 @@ body {
     border: none;
     border-radius: 5px 0 0 5px;
     background-color: #fff;
+    font-size: 16px;
 }
 
 .newsletter button {
