@@ -20,6 +20,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(143, 143, 143, 0.60);
+    height: 80px;
     border-radius: 45px;
     color: var(--main-blue);
     z-index: 10;
@@ -27,6 +28,10 @@ body {
     @media screen and (min-width: 900px) {
         display: flex;
     }
+}
+
+.navbar img {
+    width: 170px;
 }
 
 .navbar ul {
