@@ -107,6 +107,9 @@ width: 120px;
     opacity: 1;
 }
 
+.navbar-mobile button {
+    color:#0C1C3F;
+}
 
 .mobile-menu {
     width: 100%;
