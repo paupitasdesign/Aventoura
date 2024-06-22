@@ -111,6 +111,10 @@ width: 120px;
     color:#0C1C3F;
 }
 
+.menu-container button {
+    color:#0C1C3F;
+}
+
 .mobile-menu {
     width: 100%;
     max-width: 300px;
