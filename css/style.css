@@ -71,7 +71,9 @@ width: 120px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    border: 2px red solid;
+    @media screen and (min-width: 900px) {
+        display: none; 
+    }
 }
 
 .menu-container {
@@ -81,7 +83,12 @@ width: 120px;
     top: 0;
     left: 0;
     z-index: 110;
+    pointer-events: none;
 
+}
+
+.menu-container.active {
+    pointer-events: auto;
 }
 
 .backdrop {
@@ -105,12 +112,13 @@ width: 120px;
     width: 100%;
     max-width: 300px;
     height: 100%;
-    background-color: white;
+    background-color: #F2F2F2;
     position: absolute;
     top: 0;
     right: 0;
     transform: translateX(100%);
     transition: all 0.4s ease-in-out;
+    z-index: 120;
 }
 .mobile-menu.active {
     transform: translateX(0px);
