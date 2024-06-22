@@ -998,6 +998,7 @@ footer {
     }
 }
 
+
 .footer-column-links {
     display: flex;
     flex-direction: column;
@@ -1050,6 +1051,5 @@ footer {
 }
 
 .Aventoura-logo2 {
-    width: 100%;
-    max-width: 281px;
+    max-width: 180px;
 }
