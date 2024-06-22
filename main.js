@@ -18,3 +18,9 @@
       }).showToast();
 
   });
+
+  function toggleMenu(){
+    document.querySelector(".mobile-menu").classList.toggle("active")
+    document.querySelector(".backdrop").classList.toggle("active")
+    document.querySelector(".menu-container").classList.toggle("active")
+  }
