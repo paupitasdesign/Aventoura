@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +11,16 @@ body {
     background-color: #F2F2F2;
 }
 
-.navbar {
+.form-check-input:checked {
+    background-color: var(--main-blue);
+    border-color: #1c4192;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.navbar-desk {
     display: none;
     align-items: center;
     justify-content: space-between;
@@ -25,24 +35,23 @@ body {
     color: var(--main-blue);
     z-index: 10;
     font-weight: 500;
-    @media screen and (min-width: 900px) {
-        display: flex;
-    }
 }
 
-.navbar img {
+
+.navbar-desk img {
     width: 170px;
 }
 
-.navbar ul {
+.navbar-desk ul {
     display: flex;
     list-style: none;
     gap: 20px;
     padding: 0 20px;
     justify-content: center;
+    margin: 0;
 }
 
-.navbar a {
+.navbar-desk a {
     color: var(--main-blue);
     font-family: 'inter';
     font-size: 16px;
@@ -52,7 +61,7 @@ body {
     transition: 0.3s ease-out all;
 }
 
-.navbar a:hover {
+.navbar-desk a:hover {
     color: #DD2C26;
 }
 
@@ -71,9 +80,6 @@ width: 120px;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
-    @media screen and (min-width: 900px) {
-        display: none; 
-    }
 }
 
 .menu-container {
@@ -154,6 +160,17 @@ width: 120px;
     padding: 0;
 }
 
+.menu-icon,
+.close-icon {
+    width: 36px;
+    height: 36px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
 .menu-header {
     padding: 11px;
     display: flex;
@@ -175,27 +192,16 @@ width: 120px;
     align-items: center;
     min-height: 500px;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
 .white-header h1 {
     color: #000;
     font-size: 20px;
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-        color: #F2F2F2;
-    }
 }
 
 .white-header p {
     color: #000;
     font-size: 16px;
-    @media screen and (min-width: 768px) {
-        font-size: 20px;
-        color: #F2F2F2;
-    }
 }
 
 .color-header {
@@ -203,10 +209,6 @@ width: 120px;
     align-items: center;
     flex-direction: column;
     padding: 0 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        margin-top: 150px;
-    }
 }
 
 .color-header h1 {
@@ -223,17 +225,11 @@ width: 120px;
     justify-content: center;
     margin: 30px;
     width: 100%;
-    @media screen and (min-width: 768px) {
-        min-width: 300px;
-    }
 }
 
 .color-header-2 {
     text-align: center;
     padding: 50px 0;
-    @media screen and (min-width: 768px) {
-        margin-top: 100px;  
-    }
 }
 
 
@@ -241,9 +237,6 @@ width: 120px;
     color: #DD2C26;
     margin-bottom: 20px;
     font-size: 22px;
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
 }
 
 .color-header-2 p {
@@ -296,15 +289,25 @@ width: 120px;
     font-weight: bold;
 }
 
+.svg-container {
+    display: flex;
+    align-items: center;
+    color: #0C1C3F; 
+    font-size: 14px; 
+}
+
+.custom-svg {
+    width: 12px; 
+    height: 11px;
+    margin-right: 5px; 
+}
+
 .metrics {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 22px;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
 .metrics-indiv {
@@ -333,17 +336,11 @@ width: 120px;
     justify-content: center;
     align-items: center;
     padding: 0 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
 .about-main h2 {
     color: #DD2C26;
     font-size: 20px;
-    @media screen and (min-width: 768px) {
-        font-size: 40px;
-    }
 }
 
 .about-main p {
@@ -378,9 +375,6 @@ width: 120px;
     border: solid #F2F2F2 6px;
     justify-content: center;
     width: 100%;
-    @media screen and (min-width: 768px) {
-        min-width: 300px;
-    }
 }
 
 .color-header button {
@@ -403,10 +397,6 @@ width: 120px;
     align-items: center;
     flex-direction: column;
     padding: 0 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        margin-top: 150px;
-    }
 }
 
 .intro {
@@ -455,9 +445,6 @@ width: 120px;
     font-size: 20px;
     margin-bottom: 20px;
     color: #DD2C26;
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
 }
 
 .popular-destinations p {
@@ -477,11 +464,6 @@ width: 120px;
     border-radius: 9px;
     flex-shrink: 0;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        width: 402px;
-        height: 314px;
-        border-radius: 18px;
-    }
 }
 
 .image-container {
@@ -491,10 +473,6 @@ width: 120px;
     width: 100%;
     height: 450px;
     max-width: 350px;
-    @media screen and (min-width: 768px) {
-        margin-bottom: 135px;
-        margin-right: 175px;
-    }
 }
 .image-container > img {
     width: 100%;
@@ -512,10 +490,6 @@ width: 120px;
     position: absolute;
     top: 70%;
     left: 0;
-    @media screen and (min-width: 768px) {
-        left: 50%;
-        top: 30%;
-    }
 }
 
 .about-2 {
@@ -523,10 +497,6 @@ width: 120px;
     gap: 60px;   
     flex-direction: column;
     padding: 0 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-
-    }
 }
 
 .text-2 {
@@ -554,9 +524,6 @@ width: 120px;
 .testimonial-title h2 {
     color: #DD2C26;
     font-size: 20px;
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
 }
 
 .testimonial-title {
@@ -570,12 +537,6 @@ width: 120px;
 .testimonial-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    @media screen and (min-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (min-width: 900px) {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 
 .testimonial {
@@ -621,9 +582,6 @@ width: 120px;
     margin-bottom: 20px;
     color: #DD2C26;
     font-size: 20px;
-    @media screen and (min-width: 768px) {
-        font-size: 48px;
-    }
 }
 
 .contact {
@@ -631,9 +589,6 @@ width: 120px;
     align-items: center;
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
 .contact-txt {
@@ -673,9 +628,6 @@ width: 120px;
 .contact-form {
     max-width: 250px;
     margin: 0 auto;
-    @media screen and (min-width: 768px) {
-        max-width: 400px;
-    }
 }
 
 .contact-form label {
@@ -815,16 +767,10 @@ width: 120px;
     flex-direction: column;
     align-items: start;
     padding: 16px;
-    @media screen and (min-width: 768px) {
-        padding: 33px;
-    }
 }
 
 .first-blog h2 {
     font-size: 22px;
-    @media screen and (min-width: 768px) {
-        font-size: 32px;
-    }
 }
 
 .author-info time {
@@ -898,10 +844,6 @@ width: 120px;
     gap: 30px;
     flex-direction: column;
     padding: 0 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-
-    }
 }
 
 .form-txt {
@@ -918,9 +860,6 @@ width: 120px;
     display: grid;
     grid-template-columns: 1fr;
     gap: 50px;
-    @media screen and (min-width: 768px) {
-        grid-template-columns: 1fr 1fr;
-    }
 }
 
 .contact-form-contact input[type="text"],
@@ -952,12 +891,9 @@ width: 120px;
 .selector {
     margin-bottom: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
 .contact-form-contact h3 {
@@ -966,6 +902,11 @@ width: 120px;
 
 .contact-form-contact input[type="checkbox"] {
     margin-right: 10px;
+}
+
+.conditions-checkbox {
+    display: flex;
+    align-items: center;
 }
 
 .contact-form-contact button {
@@ -985,35 +926,32 @@ width: 120px;
     background-color: #1D345E;
 }
 
-.contact-info {
+.company-info {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-    }
 }
 
-.contact-info div {
+.company-info div {
     flex: 1;
     text-align: center;
 }
 
-.contact-info h2 {
+.company-info h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-.contact-info a {
+.company-info a {
     display: block;
     text-decoration: none;
     font-size: 1em;
     margin-bottom: 10px;
 }
 
-.contact-info a:hover {
+.company-info a:hover {
     text-decoration: underline;
 }
 
@@ -1070,9 +1008,6 @@ footer {
     align-items: center;
     min-height: 100px;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        padding: 60px;
-    }
 }
 
 .footer-top {
@@ -1095,20 +1030,12 @@ footer {
     flex-direction: column;
     max-width: 988px;
     gap: 16px;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        gap: 0;
-    }
 }
 
 
 .footer-column-links {
     display: flex;
     flex-direction: column;
-    @media screen and (min-width: 768px) {
-        flex-direction: row;
-        gap: 88px;
-    }
 }
 
 .footer-column-links ul {
@@ -1129,9 +1056,6 @@ footer {
     color: #f2f2f2;
     text-decoration: none;
     font-weight: 200;
-    @media screen and (min-width: 768px) {
-        font-weight: 500;
-    }
 }
 
 .footer-column-links a:hover {
@@ -1155,4 +1079,223 @@ footer {
 
 .Aventoura-logo2 {
     max-width: 180px;
+}
+
+@media screen and (min-width: 900px) {
+    .navbar-desk{
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .navbar-mobile {
+        display: none; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .white-header {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .color-header {
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .white-header h1 {
+        font-size: 48px;
+        color: #F2F2F2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .white-header p {
+        font-size: 20px;
+        color: #F2F2F2;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .color-header {
+        flex-direction: row;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .color-header-2{
+    margin-top: 100px;  
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .color-header-2 h1{
+    font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .metrics {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-main {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-main h2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .destinations-txt img {
+        min-width: 300px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .destinations-txt {
+        flex-direction: row;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .popular-destinations h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .image-scroll-main img {
+        width: 402px;
+        height: 314px;
+        border-radius: 18px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .image-container {
+        margin-bottom: 135px;
+        margin-right: 175px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .img2 {
+        left: 50%;
+        top: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about-2 {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial-title h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .testimonial-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (min-width: 900px) {
+    .testimonial-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .questions h2 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .first-blog {
+        padding: 33px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .first-blog h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form-contact {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .two-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .selector {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-form {
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        padding: 60px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-column-links {
+        flex-direction: row;
+        gap: 88px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-column-links a {
+        font-weight: 500;
+    }
 }
