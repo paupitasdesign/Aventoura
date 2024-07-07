@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$main-blue: #0C1C3F;
+$main-white: #F2F2F2;
+$main-red: #DD2C26;
+$main-blue-hover: #2959bf;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease;
+}
+
+@mixin button-style($bg-color, $text-color) {
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $main-blue-hover;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: $main-white;
+}
+
+.form-check-input {
+  &:checked {
+    background-color: $main-blue;
+    border-color: $main-blue-hover;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.navbar-desk {
+  @include flex-center;
+  display: none;
+  justify-content: space-between;
+  padding-left: 8px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(143, 143, 143, 0.60);
+  height: 80px;
+  border-radius: 45px;
+  color: $main-blue;
+  z-index: 10;
+  font-weight: 500;
+
+  img {
+    width: 170px;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  a {
+    color: $main-blue;
+    font-family: 'Inter';
+    font-size: 16px;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 8px;
+    @include transition-ease;
+
+    &:hover {
+      color: $main-red;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    display: flex;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 10px;
+  background-color: rgba(143, 143, 143, 0.60);
+  z-index: 100;
+  @include flex-center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  img {
+    width: 120px;
+  }
+
+  button {
+    color: $main-blue;
+  }
+
+  @media screen and (min-width: 900px) {
+    display: none;
+  }
+}
+
+.menu-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 110;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: auto;
+  }
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000045;
+  z-index: 110;
+  opacity: 0;
+  @include transition-ease;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.mobile-menu {
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  background-color: $main-white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  @include transition-ease;
+  z-index: 120;
+
+  &.active {
+    transform: translateX(0px);
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-blue;
+    font-weight: 500;
+
+    &:hover {
+      color: $main-blue;
+    }
+  }
+}
+
+.unstyled-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.menu-icon,
+.close-icon {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menu-header {
+  padding: 11px;
+  @include flex-center;
+  justify-content: end;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 33px auto;
+}
+
+.white-header {
+  background-image: url('../assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  @include flex-center;
+  padding: 80px;
+  justify-content: space-between;
+  min-height: 500px;
+  flex-direction: column;
+
+  h1, p {
+    color: #000;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.color-header {
+  @include flex-center;
+  flex-direction: column;
+  padding: 0 16px;
+
+  h1 {
+    font-size: 48px;
+    color: $main-red;
+    margin: 0;
+  }
+
+  img {
+    display: flex;
+    max-width: 500px;
+    border-radius: 18px;
+    border: solid $main-white 6px;
+    justify-content: center;
+    margin: 30px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 16px;
+    color: $main-blue;
+  }
+
+  button {
+    @include button-style($main-blue, white);
+    margin-top: 11px;
+  }
+}
+
+.color-header-2 {
+  text-align: center;
+  padding: 50px 0;
+
+  h1 {
+    color: $main-red;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+}
+
+.headerText {
+  max-width: 650px;
+}
+
+.tower, .about-main img, .about-2 img, .img2-destinations img, .tourspics img, .photos-grid img, .contact img {
+  border-radius: 18px;
+  border: solid $main-white 6px;
+}
+
+.pill {
+  background-color: $main-red;
+  color: $main-white;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+.imgWrapper {
+  position: relative;
+  @include flex-center;
+  align-items: end;
+}
+
+.fantasia {
+  @include flex-center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  background-color: $main-white;
+  color: $main-blue;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 18px 0 18px 0;
+  width: 70%;
+  height: 55px;
+  padding: 16px;
+  font-weight: bold;
+}
+
+.svg-container {
+  @include flex-center;
+  color: $main-blue;
+  font-size: 14px;
+}
+
+.custom-svg {
+  width: 12px;
+  height: 11px;
+  margin-right: 5px;
+}
+
+.metrics {
+  @extend .container;
+  @include flex-center;
+  flex-direction: column;
+  gap: 22px;
+
+  .metrics-indiv {
+    @include flex-center;
+    gap: 22px;
+  }
+
+  .big-number {
+    font-weight: bold;
+    font-size: 40px;
+  }
+}
+
+.about-main {
+  @include flex-center;
+  flex-direction: column;
+  gap: 60px;
+  padding: 0 16px;
+
+  h2 {
+    color: $main-red;
+    font-size: 20px;
+  }
+
+  p {
+    max-width: 900px;
+  }
+
+  a {
+    margin-top: 60px;
+    display: block;
+    font-weight: bold;
+    color: $main-blue;
+
+    &:hover {
+      color: $main-blue-hover;
+    }
+  }
+}
+
+.destinations-txt {
+  margin-top: 150px;
+  @include flex-center;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 16px;
+
+  img {
+    @extend .tower;
+    width: 100%;
+  }
+}
+
+.intro {
+  max-width: 800px;
+
+  h1 {
+    font-size: 48px;
+    color: $main-red;
+  }
+
+  p {
+    font-size: 16px;
+    color: $main-blue;
+  }
+
+  button {
+    @include button-style($main-blue, white);
+    margin-top: 11px;
+  }
+}
+
+.about-2 {
+  @include flex-center;
+  flex-direction: column;
+  gap: 22px;
+
+  .about-2-indiv {
+    display: grid;
+    gap: 22px;
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+      "img1 txt1"
+      "txt2 img2";
+    }
+
+    h1 {
+      color: $main-red;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: $main-blue;
+    }
+
+    a {
+      font-weight: bold;
+      color: $main-blue;
+
+      &:hover {
+        color: $main-blue-hover;
+      }
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    border: solid $main-white 6px;
+    width: 100%;
+  }
+}
+
+.img2-destinations {
+  margin-top: 30px;
+
+  .destinations2-grid {
+    display: grid;
+    gap: 16px;
+
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.tourspics {
+  @include flex-center;
+  flex-direction: column;
+  gap: 16px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact {
+  @include flex-center;
+  flex-direction: column;
+  gap: 8px;
+
+  h2 {
+    color: $main-red;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    @include button-style($main-blue, white);
+    margin-top: 16px;
+  }
+}
+
+.gallery-mix {
+  padding: 16px;
+  @include flex-center;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    color: $main-blue;
+  }
+
+  p {
+    color: $main-blue;
+  }
+}
+
+footer {
+  background-color: $main-blue;
+  color: $main-white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+
+  p {
+    margin: 0;
+    color: $main-white;
+  }
+}
+
+button {
+  &.learn-more {
+    @include button-style($main-red, $main-white);
+  }
+
+  &.book-now {
+    @include button-style($main-blue, $main-white);
+  }
+}
