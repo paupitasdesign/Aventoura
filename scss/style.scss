@@ -1,0 +1,52 @@
+@import 'navbar';
+@import 'gallery';
+@import 'footer';
+@import 'media-queries';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$main-blue: #0C1C3F;
+$main-white: #F2F2F2;
+$main-red: #DD2C26;
+$main-blue-hover: #2959bf;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin transition-ease {
+  transition: all 0.3s ease;
+}
+
+@mixin button-style($bg-color, $text-color) {
+  padding: 10px 20px;
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $main-blue-hover;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  background-color: $main-white;
+}
+
+.form-check-input {
+  &:checked {
+    background-color: $main-blue;
+    border-color: $main-blue-hover;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
