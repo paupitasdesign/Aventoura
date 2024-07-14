@@ -1,0 +1,147 @@
+@media screen and (min-width: 900px) {
+    .navbar-desk {
+      display: flex;
+    }
+  
+    .navbar-mobile {
+      display: none;
+    }
+  
+    .testimonial-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media screen and (min-width: 768px) {
+    .white-header {
+      flex-direction: row;
+  
+      h1 {
+        font-size: 48px;
+        color: $main-white;
+      }
+  
+      p {
+        font-size: 20px;
+        color: #F2F2F2;
+      }
+    }
+  
+    .color-header {
+      min-width: 300px;
+      flex-direction: row;
+      margin-top: 150px;
+    }
+  
+    .color-header-2 {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      h1 {
+        font-size: 48px;
+      }
+    }
+  
+    .metrics {
+      flex-direction: row;
+    }
+  
+    .about-main {
+      flex-direction: row;
+  
+      h2 {
+        font-size: 40px;
+      }
+    }
+  
+    .destinations-txt {
+      flex-direction: row;
+      margin-top: 150px;
+  
+      img {
+        min-width: 300px;
+      }
+    }
+  
+    .popular-destinations h2 {
+      font-size: 48px;
+    }
+  
+    .image-scroll-main img {
+      width: 402px;
+      height: 314px;
+      border-radius: 18px;
+    }
+  
+    .image-container {
+      margin-bottom: 135px;
+      margin-right: 175px;
+    }
+  
+    .img2 {
+      left: 50%;
+      top: 30%;
+    }
+  
+    .about-2 {
+      flex-direction: row;
+    }
+  
+    .testimonial-title h2 {
+      font-size: 48px;
+    }
+  
+    .testimonial-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .questions h2 {
+      font-size: 48px;
+    }
+  
+    .contact {
+      flex-direction: row;
+    }
+  
+    .contact-form {
+      max-width: 400px;
+      flex-direction: row;
+    }
+  
+    .first-blog {
+      padding: 33px;
+  
+      h2 {
+        font-size: 32px;
+      }
+    }
+  
+    .contact-form-contact {
+      flex-direction: row;
+    }
+  
+    .two-columns {
+      grid-template-columns: 1fr 1fr;
+    }
+  
+    .selector {
+      flex-direction: row;
+    }
+  
+    footer {
+      padding: 60px;
+    }
+  
+    .footer-bottom {
+      flex-direction: row;
+      gap: 0;
+    }
+  
+    .footer-column-links {
+      flex-direction: row;
+      gap: 88px;
+  
+      a {
+        font-weight: 500;
+      }
+    }
+  }

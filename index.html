@@ -5,14 +5,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Aventoura</title>
 </head>
 
 <body>
     <nav class="navbar-desk">
-        <a href="/index.html"><img src="./assets/aventoura-new-logo-blue.png" alt="logo"></a>
+        <a href="/index.html"><img src="./assets/aventoura-new-logo-blue copy.png" alt="logo"></a>
         <ul>
             <li><a href="/index.html">Inicio</a></li>
             <li> <a href="./pages/about-us.html">Nosotros</a></li>
@@ -21,14 +21,14 @@
             <li><a href="./pages/contact-us.html">Contacto</a></li>
         </ul>
     </nav>
-    <nav class="navbar-mobile">
-        <img src="./assets/aventoura-new-logo-blue.png" alt="logo">
+    <div class="navbar-mobile">
+        <img src="./assets/aventoura-new-logo-blue copy.png" alt="logo">
         <button onclick="toggleMenu()" class="unstyled-button menu-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu-icon">
                 <path d="M3 6h18m-10 6h10M6 18h15"/>
             </svg>
         </button>
-    </nav>
+    </div>
     <div class="menu-container">
         <div onclick="toggleMenu()" class="backdrop"></div>
         <div class="mobile-menu">
@@ -41,10 +41,10 @@
             </div>
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
-                <li><a href="../pages/about-us.html">Nosotros</a></li>
-                <li><a href="../pages/destinations.html">Destinos</a></li>
-                <li><a href="../pages/experiences.html">Experiencias</a></li>
-                <li><a href="../pages/contact-us.html">Contacto</a></li>    
+                <li><a href="./pages/about-us.html">Nosotros</a></li>
+                <li><a href="./pages/destinations.html">Destinos</a></li>
+                <li><a href="./pages/experiences.html">Experiencias</a></li>
+                <li><a href="./pages/contact-us.html">Contacto</a></li>    
             </ul>
         </div>
     </div>
@@ -55,7 +55,7 @@
             <p>Embárcate en aventuras extraordinarias y crea recuerdos inolvidables con Aventoura.</p>
         </div>
         <div class="imgWrapper">
-            <img class="tower" src="./assets/paris.jpg" alt="Eiffel Tower">
+            <img class="tower" src="./assets/eiffel-twr.png" alt="Eiffel Tower">
             <div class="pill">popular</div>
             <div class="fantasia">
                 <div>Fantasía Europa</div>
@@ -72,22 +72,22 @@
     <aside>
         <section class="metrics">
             <article class="metrics-indiv">
-                <span class="big-number">1M+</span>
+                <p class="big-number">1M+</p>
                 <p>De clientes nos visita anualmente</p>
             </article>
             <article class="metrics-indiv">
-                <span class="big-number">98%</span>
+                <p class="big-number">98%</p>
                 <p>Clientes satisfechos</p>
             </article>
             <article class="metrics-indiv">
-                <span class="big-number">10+</span>
+                <p class="big-number">10+</p>
                 <p>Años de experiencia</p>
             </article>
         </section>
     </aside>
     <main>
         <section class="about-main container">
-            <img src="./assets/bggirl.jpg" alt="bagpack-girl">
+            <img src="./assets/travel-girl.png" alt="bagpack-girl">
             <div>
                 <h2>Quiénes Somos</h2>
                 <p>Aventoura es una agencia dedicada a crear experiencias de viaje únicas e inolvidables. Nuestro
@@ -110,10 +110,10 @@
                     y viaja con Aventoura.</p>
             </div>
             <div class="image-scroll-main">
-                <img src="./assets/cruise.jpg" alt="photo of a cruise">
-                <img src="./assets/tokyo.jpg" alt="photo of tokyo downtown">
-                <img src="./assets/london.jpg" alt="photo of big ben">
-                <img src="./assets/saudi.jpg" alt="photo of mosque">
+                <img src="./assets/cruise-parked.png" alt="photo of a cruise">
+                <img src="./assets/tokyo-downtown.png" alt="photo of tokyo downtown">
+                <img src="./assets/london-bigb.png" alt="photo of big ben">
+                <img src="./assets/Nueva-Delhi.png" alt="photo of mosque">
             </div>
         </section>
 
@@ -121,7 +121,7 @@
             <h2>Lo que dicen nuestros viajeros</h2>
             <div class="testimonial-cards">
                 <article class="testimonial">
-                    <img src="./assets/guy-icon.jpg" alt="photo of a guy" />
+                    <img src="./assets/boy-testimonial.png" alt="photo of a guy" />
                     <div class="testimonial-text">
                         <h3>John Doe</h3>
                         <p>"Aventoura me dió una experiencia inolvidable. El tour estuvo perfectamente organizado y
@@ -129,7 +129,7 @@
                     </div>
                 </article>
                 <article class="testimonial">
-                    <img src="./assets/couple-icon.jpg" alt="photo of a couple" />
+                    <img src="./assets/couple-testimonial.png" alt="photo of a couple" />
                     <div class="testimonial-text">
                         <h3>David & Julia</h3>
                         <p>"Recomendamos encarecidamente Aventoura a cualquiera que busque una aventura. Su servicio es
@@ -137,7 +137,7 @@
                     </div>
                 </article>
                 <article class="testimonial">
-                    <img src="./assets/girl-icon.jpg" alt="photo of a girl" />
+                    <img src="./assets/girl-testimonial.png" alt="photo of a girl" />
                     <div class="testimonial-text">
                         <h3>Valentina</h3>
                         <p>"¡Una experiencia realmente increíble! Aventoura superó todas mis expectativas. No puedo
@@ -177,7 +177,7 @@
         </section>
         <section class="footer-bottom">
             <div class="footer-column">
-                <img class="Aventoura-logo2" src="./assets/aventoura-a-logo-r:w.png" alt="Aventoura Logo">
+                <img class="Aventoura-logo2" src="./assets/aventoura-a-logo-r:w copy.png" alt="Aventoura Logo">
                 <p><strong>Email:</strong> info@aventoura.com</p>
                 <p><strong>Teléfono:</strong> +1234567890</p>
             </div>
@@ -203,14 +203,14 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <img src="./assets/s-media.png" alt="Social Media Logos">
+                <img src="./assets/s-media copy.png" alt="Social Media Logos">
             </div>
         </section>
         <p class="copyright">© 2024 Aventoura. All rights reserved.</p>
     </footer>
    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 
 </html>

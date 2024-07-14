@@ -1,5 +1,17 @@
 {
-  "dependencies": {
-    "bootstrap": "^5.3.3"
+  "name": "aventoura-proyecto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass --watch scss/styles.scss:main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.77.8"
   }
 }
+
+
