@@ -5,3 +5,12 @@ $main-blue-hover: #2959bf;
 $main-blue-btn-hover: #1D345E;
 $background-color: #F2F2F2;
 $font-family: "Inter", sans-serif;
+
+@mixin bg-img($url) {
+    background-image: url($url);
+}
+
+@mixin gallery-img($color) {
+    border-radius: 18px;
+    border: solid $color 6px;
+}
