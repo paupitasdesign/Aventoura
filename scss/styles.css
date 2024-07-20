@@ -509,7 +509,8 @@ h1, h2 {
   padding: 0 16px;
 }
 .about-2 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 18px;
   border: solid #F2F2F2 6px;
 }
@@ -570,7 +571,8 @@ h1, h2 {
   height: 100px;
   border-radius: 50%;
   margin-bottom: 15px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .testimonial h3 {
   margin: 10px 0;
@@ -749,7 +751,8 @@ h1, h2 {
   width: 100%;
   height: 300px;
   border: 18px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .blog-header {
@@ -783,7 +786,8 @@ h1, h2 {
 .author-info img {
   width: 30px !important;
   height: 30px !important;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .author-info p {
   font-weight: bold;
@@ -876,6 +880,7 @@ h1, h2 {
   font-size: 1em;
   cursor: pointer;
   margin-top: 11px;
+  width: -moz-max-content;
   width: max-content;
   padding: 10px 30px;
 }
@@ -1090,6 +1095,4 @@ h1, h2 {
   .footer-column-links a {
     font-weight: 500;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=styles.css.map */

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Destinos</title>
@@ -24,7 +25,7 @@
         <img src="../assets/aventoura-new-logo-blue copy.png" alt="logo">
         <button onclick="toggleMenu()" class="unstyled-button menu-toggle">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="menu-icon">
-                <path d="M3 6h18m-10 6h10M6 18h15"/>
+                <path d="M3 6h18m-10 6h10M6 18h15" />
             </svg>
         </button>
     </nav>
@@ -34,7 +35,7 @@
             <div class="menu-header">
                 <button onclick="toggleMenu()" class="unstyled-button close-menu">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="close-icon">
-                        <path d="M17 17L7 7m10 0L7 17"/>
+                        <path d="M17 17L7 7m10 0L7 17" />
                     </svg>
                 </button>
             </div>
@@ -43,14 +44,15 @@
                 <li><a href="./about-us.html">Nosotros</a></li>
                 <li><a href="./destinations.html">Destinos</a></li>
                 <li><a href="./experiences.html">Experiencias</a></li>
-                <li><a href="./contact-us.html">Contacto</a></li>    
+                <li><a href="./contact-us.html">Contacto</a></li>
             </ul>
         </div>
     </div>
     <header>
         <section class="destinations-txt container">
             <section class="intro">
-                <h1>Embárcate en un viaje de descubrimiento inolvidable con nuestra selección exclusiva de destinos.</h1>
+                <h1>Embárcate en un viaje de descubrimiento inolvidable con nuestra selección exclusiva de destinos.
+                </h1>
                 <p>Hemos seleccionado cuidadosamente algunos de nuestros tours más reconocidos para despertar tu pasión
                     por los viajes y mostrarte la diversidad de experiencias que ofrecemos. Desde atravesar majestuosas
                     montañas hasta explorar ruinas antiguas, estos itinerarios cuidadosamente seleccionados están
@@ -59,10 +61,10 @@
                     aquí para crear un itinerario personalizado basado en tus deseos únicos. Entonces, echa un vistazo a
                     nuestros tours destacados o simplemente contáctanos para hablar sobre tu visión de viaje: ¡el mundo
                     te espera!</p>
-                    <a href="./contact-us.html">
-                        <button>Contáctanos ya</button>
-                    </a>
-            </section> 
+                <a href="./contact-us.html">
+                    <button>Contáctanos ya</button>
+                </a>
+            </section>
             <img src="../assets/guy-airport-gate.png" alt="person standing in front of screen">
         </section>
     </header>
@@ -71,32 +73,74 @@
         <section class="tourslist container">
             <div>
                 <h2>Conoce algunos<br>de nuestros Tours</h2>
-             </div>
-             <div class="tourscolumns">
-                 <ul>
-                    <li>Europaseo</li>
-                    <li>Panorama Mediterráneo</li>
-                    <li>Europa Soñada</li>
-                    <li>Fantasía Europa</li>
-                    <li>USA: Oeste al Completo</li>
-                    <li>USA: Ruta de la Música</li>
-                    <li>Turquía Sensacional</li>
-                    <li>Egipto Estelar</li>
-                    <li>Tailandia Auténtica</li>
-                    <li>Australia a tu Medida</li>
-                    <li>México y Riviera Maya</li>
-                    <li>Machu Picchu Místico</li>
-                 </ul>
-                 <div class="tourspics">
-                     <img src="../assets/london-cabin.png" alt="London Big Ben">
-                     <img src="../assets/japan.png" alt="Tokyo Mountain">
-                     <img src="../assets/ny.png" alt="New York">
-                     <img src="../assets/cappadocia.png" alt="hot air balloons">
-                     <img src="../assets/italy-gondola.png" alt="italy gondola">
-                     <img src="../assets/cartagena-street.png" alt="cartagena street">
-                     <img src="../assets/egypt-pyramid.png" alt="egypt pyramid with camel">
-                     <img src="../assets/machu-picchu.png" alt="machu Picchu view">
-                 </div>
+            </div>
+            <div class="tourscolumns">
+                <ul>
+                    <li data-bs-toggle="collapse" data-bs-target="#europaseo" aria-expanded="false" aria-controls="europaseo" role="button">Europaseo</li>
+                    <div class="collapse" id="europaseo">
+                        <div class="card card-body">
+                            Recorre las ciudades más emblemáticas de Europa en un viaje inolvidable. Disfruta de la historia, la cultura y la gastronomía de este fascinante continente.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#turquia" aria-expanded="false" aria-controls="turquia" role="button">Turquía Sensacional</li>
+                    <div class="collapse" id="turquia">
+                        <div class="card card-body">
+                            Déjate cautivar por la magia de Turquía en un tour que te llevará por Estambul, Capadocia y Pamukkale. Descubre la historia, la cultura y la gastronomía de este país fascinante.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#europas" aria-expanded="false" aria-controls="europas" role="button">Europa Soñada</li>
+                    <div class="collapse" id="europas">
+                        <div class="card card-body">
+                            Vive un sueño hecho realidad en un tour por las capitales europeas más famosas. Visita París, Roma, Londres, Berlín y Amsterdam en un viaje que jamás olvidarás.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#usa" aria-expanded="false" aria-controls="usa" role="button">USA: Oeste al Completo</li>
+                    <div class="collapse" id="usa">
+                        <div class="card card-body">
+                            Descubre la vastedad del oeste americano en un tour que te llevará por los parques nacionales más impresionantes, las ciudades más emblemáticas y los paisajes más icónicos.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#Egipto" aria-expanded="false" aria-controls="Egipto" role="button">Egipto Estelar</li>
+                    <div class="collapse" id="Egipto">
+                        <div class="card card-body">
+                            Descifra los misterios del antiguo Egipto en un tour que te llevará por las pirámides, la Esfinge y el Valle de los Reyes. Un viaje lleno de historia y misticismo.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#Tailandia" aria-expanded="false" aria-controls="Tailandia" role="button">Tailandia Auténtica</li>
+                    <div class="collapse" id="Tailandia">
+                        <div class="card card-body">
+                            Adéntrate en la cultura tailandesa en un tour que te llevará por Bangkok, Chiang Mai y las islas Phi Phi. Disfruta de la comida, los templos y la amabilidad de este país encantador.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#Australia" aria-expanded="false" aria-controls="Australia" role="button">Australia a tu Medida</li>
+                    <div class="collapse" id="Australia">
+                        <div class="card card-body">
+                            Descubre la diversidad de Australia en un tour que te llevará por las ciudades más importantes, los parques nacionales más impresionantes y la Gran Barrera de Coral. Un viaje a tu medida.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#Mexico" aria-expanded="false" aria-controls="Mexico" role="button">México y Riviera Maya</li>
+                    <div class="collapse" id="Mexico">
+                        <div class="card card-body">
+                            Disfruta de las playas de arena blanca, las aguas cristalinas y la rica cultura de México en un tour que te llevará por Cancún, Tulum y Chichén Itzá. Un viaje lleno de sol, aventura y historia.
+                        </div>
+                    </div>
+                    <li data-bs-toggle="collapse" data-bs-target="#Machu" aria-expanded="false" aria-controls="Machu" role="button">Machu Picchu Místico</li>
+                    <div class="collapse" id="Machu">
+                        <div class="card card-body">
+                            Descubre la ciudadela inca de Machu Picchu en un tour que te llevará por Cusco, el Valle Sagrado y Aguas Calientes. Un viaje lleno de historia, naturaleza y espiritualidad.
+                        </div>
+                    </div>
+                </ul>
+                <div class="tourspics">
+                    <img src="../assets/london-cabin.png" alt="London Big Ben">
+                    <img src="../assets/japan.png" alt="Tokyo Mountain">
+                    <img src="../assets/ny.png" alt="New York">
+                    <img src="../assets/cappadocia.png" alt="hot air balloons">
+                    <img src="../assets/italy-gondola.png" alt="italy gondola">
+                    <img src="../assets/cartagena-street.png" alt="cartagena street">
+                    <img src="../assets/egypt-pyramid.png" alt="egypt pyramid with camel">
+                    <img src="../assets/machu-picchu.png" alt="machu Picchu view">
+                </div>
             </div>
         </section>
     </main>
@@ -146,6 +190,7 @@
     </footer>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="text/javascript" src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </body>
 

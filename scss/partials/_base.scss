@@ -8,9 +8,14 @@
     max-width: 1400px;
     margin: 33px auto;
   }
+
+  h1, h2 {
+    font-weight: 700;
+  }
+ 
   
   .white-header {
-    background-image: url('https://public.mssnapps.com/T9HkSFAze5hFYNM1xqRaX8N0vmK9bY9I.jpg');
+    @include bg-img('https://public.mssnapps.com/T9HkSFAze5hFYNM1xqRaX8N0vmK9bY9I.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -46,8 +51,7 @@
     img {
       display: flex;
       max-width: 500px;
-      border-radius: 18px;
-      border: solid $main-white 6px;
+      @include gallery-img($main-white);
       justify-content: center;
       margin: 30px;
       width: 100%;
@@ -215,8 +219,7 @@
     padding: 0 16px;
   
     img {
-      border-radius: 18px;
-      border: solid $main-white 6px;
+      @include gallery-img($main-white);
       justify-content: center;
       width: 100%;
     }
@@ -312,8 +315,7 @@
   
     img {
       object-fit: cover;
-      border-radius: 18px;
-      border: solid $main-white 6px;
+      @include gallery-img($main-white);
     }
   }
   
@@ -417,8 +419,7 @@
   
     img {
       max-width: 500px;
-      border-radius: 18px;
-      border: solid $main-white 6px;
+      @include gallery-img($main-white);
       width: 100%;
     }
   }
@@ -496,8 +497,7 @@
     display: flex;
     justify-content: center;
     max-width: 1400px;
-    border-radius: 18px;
-    border: solid $main-white 6px;
+    @include gallery-img($main-white);
     width: 100%;
     box-sizing: border-box;
   }
@@ -519,13 +519,13 @@
       padding: 0;
       text-align: center;
       margin-right: 33px;
-      width: 600px;
+      width: 900px;
     }
   
     li {
       background-color: #3D4143;
       color: $main-white;
-      padding: 10px 20px;
+      padding: 10px 50px;
       margin-bottom: 10px;
       border-radius: 9px;
       cursor: pointer;
@@ -545,8 +545,7 @@
   
     img {
       max-width: 300px;
-      border-radius: 18px;
-      border: solid $main-white 6px;
+      @include gallery-img($main-white);
       flex-shrink: 0;
     }
   }
