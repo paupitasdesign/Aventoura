@@ -232,6 +232,8 @@ footer {
 
 h1, h2 {
   font-weight: 700;
+  font-size: 40px;
+  color: #DD2C26;
 }
 
 .white-header {
@@ -261,8 +263,6 @@ h1, h2 {
   padding: 0 16px;
 }
 .color-header h1 {
-  font-size: 48px;
-  color: #DD2C26;
   margin: 0px;
 }
 .color-header img {
@@ -292,15 +292,26 @@ h1, h2 {
   background-color: #1D345E;
 }
 
+.color-header2 {
+  padding-top: 30px;
+  text-align: center;
+}
+.color-header2 h1 {
+  color: #DD2C26;
+  margin-bottom: 20px;
+  font-weight: bold !important;
+}
+.color-header2 p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
 .color-header-2 {
   text-align: center;
   padding-top: 100px;
 }
 .color-header-2 h1 {
-  color: #DD2C26;
   margin-bottom: 20px;
-  font-size: 22px;
-  font-weight: bold !important;
 }
 .color-header-2 p {
   font-size: 1.2em;
@@ -364,11 +375,16 @@ h1, h2 {
   margin-right: 5px;
 }
 
+.visitas {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
 .metrics {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 22px;
   flex-direction: column;
 }
 
@@ -382,6 +398,7 @@ h1, h2 {
 .big-number {
   font-weight: bold;
   font-size: 40px;
+  margin: 20px 0px;
 }
 
 .about-main {
@@ -400,7 +417,7 @@ h1, h2 {
   width: 100%;
 }
 .about-main h2 {
-  color: var(--main-red);
+  color: #DD2C26;
   font-size: 20px;
 }
 .about-main p {
@@ -417,7 +434,7 @@ h1, h2 {
 }
 
 .destinations-txt {
-  margin-top: 150px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -437,10 +454,7 @@ h1, h2 {
 .intro p {
   font-size: 16px;
   color: #0C1C3F;
-}
-.intro h1 {
-  font-size: 48px;
-  color: #DD2C26;
+  margin-top: 50px;
 }
 .intro button {
   padding: 10px 20px;
@@ -489,6 +503,7 @@ h1, h2 {
 }
 
 .image-container {
+  display: none;
   position: relative;
   margin: 0 auto;
   margin-bottom: 315px;
@@ -522,10 +537,6 @@ h1, h2 {
 
 .text-2 {
   margin-right: 30px;
-}
-.text-2 h2 {
-  font-size: 48px;
-  color: #DD2C26;
 }
 .text-2 p {
   max-width: 700px;
@@ -612,11 +623,7 @@ h1, h2 {
 
 .contact-txt {
   max-width: 800px;
-  margin-left: 30px;
-}
-.contact-txt h2 {
-  font-size: 48px;
-  color: #DD2C26;
+  margin: 0 30px;
 }
 .contact-txt p {
   color: #0C1C3F;
@@ -671,18 +678,17 @@ h1, h2 {
 }
 
 .img2-destinations {
-  display: flex;
+  display: none;
   justify-content: center;
   max-width: 1400px;
   border-radius: 18px;
   border: solid #F2F2F2 6px;
   width: 100%;
   box-sizing: border-box;
+  object-fit: cover;
 }
 
 .tourslist h2 {
-  font-size: 48px;
-  color: #DD2C26;
   text-align: end;
 }
 
@@ -694,7 +700,6 @@ h1, h2 {
   list-style: none;
   padding: 0;
   text-align: center;
-  margin-right: 33px;
   width: 900px;
 }
 .tourscolumns li {
@@ -713,7 +718,7 @@ h1, h2 {
 }
 
 .tourspics {
-  display: flex;
+  display: none;
   overflow-x: auto;
 }
 .tourspics img {
@@ -739,10 +744,6 @@ h1, h2 {
 .blog {
   text-align: center;
   padding: 0 16px;
-}
-.blog h2 {
-  color: #DD2C26;
-  font-size: 48px;
 }
 .blog img {
   position: relative;
@@ -926,6 +927,7 @@ h1, h2 {
 .company-info h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
+  color: #0C1C3F;
 }
 .company-info a {
   display: block;
@@ -985,6 +987,9 @@ h1, h2 {
   .testimonial-cards {
     grid-template-columns: repeat(3, 1fr);
   }
+  .about-main h2 {
+    color: #DD2C26;
+  }
 }
 @media screen and (min-width: 768px) {
   .white-header {
@@ -997,6 +1002,9 @@ h1, h2 {
   .white-header p {
     font-size: 20px;
     color: #F2F2F2;
+  }
+  .intro p {
+    margin-top: 0;
   }
   .color-header {
     min-width: 300px;
@@ -1012,12 +1020,14 @@ h1, h2 {
   }
   .metrics {
     flex-direction: row;
+    gap: 11px;
   }
   .about-main {
     flex-direction: row;
   }
   .about-main h2 {
     font-size: 40px;
+    color: #DD2C26;
   }
   .destinations-txt {
     flex-direction: row;
@@ -1026,8 +1036,17 @@ h1, h2 {
   .destinations-txt img {
     min-width: 300px;
   }
+  .img2-destinations {
+    display: flex;
+  }
   .popular-destinations h2 {
     font-size: 48px;
+  }
+  .tourscolumns {
+    gap: 10px;
+  }
+  .tourspics {
+    display: flex;
   }
   .image-scroll-main img {
     width: 402px;
@@ -1037,6 +1056,7 @@ h1, h2 {
   .image-container {
     margin-bottom: 135px;
     margin-right: 175px;
+    display: block;
   }
   .img2 {
     left: 50%;

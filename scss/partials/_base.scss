@@ -11,6 +11,8 @@
 
   h1, h2 {
     font-weight: 700;
+    font-size: 40px;
+    color: $main-red;
   }
  
   
@@ -43,8 +45,6 @@
     padding: 0 16px;
   
     h1 {
-      font-size: 48px;
-      color: $main-red;
       margin: 0px;
     }
   
@@ -78,15 +78,27 @@
     }
   }
   
+  .color-header2 {
+    padding-top: 30px;
+    text-align: center;
+
+    h1 {
+      color: $main-red;
+      margin-bottom: 20px;
+      font-weight: bold !important;
+    }
+  
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+  }
   .color-header-2 {
     text-align: center;
     padding-top: 100px;
   
     h1 {
-      color: $main-red;
       margin-bottom: 20px;
-      font-size: 22px;
-      font-weight: bold !important;
     }
   
     p {
@@ -152,12 +164,17 @@
     height: 11px;
     margin-right: 5px;
   }
+
+  .visitas {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+  }
   
   .metrics {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 22px;
     flex-direction: column;
   }
   
@@ -171,6 +188,7 @@
   .big-number {
     font-weight: bold;
     font-size: 40px;
+    margin: 20px 0px;
   }
   
   .about-main {
@@ -190,7 +208,7 @@
     }
   
     h2 {
-      color: var(--main-red);
+      color: $main-red;
       font-size: 20px;
     }
   
@@ -211,7 +229,7 @@
   }
   
   .destinations-txt {
-    margin-top: 150px;
+    margin-top:100px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -231,12 +249,8 @@
     p {
       font-size: 16px;
       color: $main-blue;
+      margin-top: 50px;
   
-    }
-  
-    h1 {
-      font-size: 48px;
-      color: $main-red;
     }
   
     button {
@@ -293,6 +307,7 @@
   }
   
   .image-container {
+    display: none;
     position: relative;
     margin: 0 auto;
     margin-bottom: 315px;
@@ -327,12 +342,7 @@
   
   .text-2 {
     margin-right: 30px;
-  
-    h2 {
-      font-size: 48px;
-      color: $main-red
-    }
-  
+    
     p {
       max-width: 700px;
     }
@@ -426,13 +436,8 @@
   
   .contact-txt {
     max-width: 800px;
-    margin-left: 30px;
-  
-    h2 {
-      font-size: 48px;
-      color: $main-red;
-    }
-  
+    margin: 0 30px;
+    
     p {
       color: $main-blue
     }
@@ -494,18 +499,17 @@
   }
   
   .img2-destinations {
-    display: flex;
+    display: none;
     justify-content: center;
     max-width: 1400px;
     @include gallery-img($main-white);
     width: 100%;
     box-sizing: border-box;
+    object-fit: cover;
   }
   
   .tourslist {
     h2 {
-      font-size: 48px;
-      color: $main-red;
       text-align: end;
     }
   }
@@ -518,7 +522,6 @@
       list-style: none;
       padding: 0;
       text-align: center;
-      margin-right: 33px;
       width: 900px;
     }
   
@@ -540,7 +543,7 @@
   }
   
   .tourspics {
-    display: flex;
+    display: none;
     overflow-x: auto;
   
     img {
@@ -567,11 +570,6 @@
   .blog {
     text-align: center;
     padding: 0 16px;
-  
-    h2 {
-      color: $main-red;
-      font-size: 48px;
-    }
   
     img {
       position: relative;
@@ -776,6 +774,7 @@
     h2 {
       font-size: 1.5em;
       margin-bottom: 10px;
+      color: $main-blue;
     }
   
     a {
