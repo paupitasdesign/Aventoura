@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/avioncito.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Aventoura</title>
     <meta name="description" content="¡Planifica tus vacaciones soñadas con Aventoura! Explora paquetes de viaje, descubre destinos a través de nuestra galería interactiva y obtén asesoramiento experto para tomar decisiones informadas.">
@@ -163,7 +164,12 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Mensaje:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
+                <button class="button" type="button">
+                    <span class="default">Send</span>
+                    <span class="success">Sent</span>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                  </button>
             </form>
         </section>
     </main>
@@ -222,6 +228,8 @@
    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
 </body>
 
 </html>
