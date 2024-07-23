@@ -202,11 +202,11 @@ footer {
 }
 
 .social-media {
-  display: flex;
-  align-items: center;
+  font-size: 30px;
 }
-.social-media img {
-  width: 120px;
+.social-media a {
+  color: #F2F2F2;
+  text-decoration: none;
 }
 
 .copyright {
@@ -302,7 +302,7 @@ h1, h2 {
   font-weight: bold !important;
 }
 .color-header2 p {
-  font-size: 1.2em;
+  font-size: 16px;
   margin-bottom: 40px;
 }
 

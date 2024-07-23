@@ -61,13 +61,13 @@ footer {
       }
     }
   }
-  
+
   .social-media {
-    display: flex;
-    align-items: center;
-  
-    img {
-      width: 120px;
+    font-size: 30px;
+
+    a {
+      color: $main-white;
+      text-decoration: none;
     }
   }
   
