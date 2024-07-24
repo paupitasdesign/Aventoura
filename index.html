@@ -151,7 +151,7 @@
         </section>
 
         <section class="questions container">
-            <div>
+            <div class="title">
                 <h2>¿Tienes alguna pregunta?</h2>
                 <p>¡Estamos aquí para ayudarte! Completa el formulario a continuación y nos pondremos en contacto
                     contigo lo antes posible.</p>
@@ -163,7 +163,12 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Mensaje:</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Enviar</button>
+                <button class="button" type="button">
+                    <span class="default">Send</span>
+                    <span class="success">Sent</span>
+                    <div class="left"></div>
+                    <div class="right"></div>
+                  </button>
             </form>
         </section>
     </main>
@@ -222,6 +227,8 @@
    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+
 </body>
 
 </html>
